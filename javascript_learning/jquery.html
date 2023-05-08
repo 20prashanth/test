@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<p>, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+    span {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .example {
+        font-style: italic;
+      }
+    </style>
+</head>
+<body>
+    <p id="ready"></p>
+    to do list:<span>(click here to change)</span>
+    <ul>
+        <li>milk</li>
+        <li>cheese</li>
+        <li>ghee</li>
+    </ul>
+    <div id="container">
+        <p id="question">what is the capital of INDIA?</p>
+        <input type="text" id="answer-box">
+
+        <p id="result"></p>
+        <P id="answer"></P>
+        
+        <button>submit</button>
+        
+         
+
+    </div>
+    <script>
+    $(document).ready(function(){
+        $("#ready").text("HELLO, WELCOME TO ETG").css("color","green").css("font-size","50px").css("text-align","center").css("background-color","pink").fadeIn("5000")
+    });
+    $("span").click(function(){
+        $("li").each(function(){
+            $(this).toggleClass("example");
+        });
+    });
+
+    $("button").click(function(){
+        var answer = $("#answer-box").val();
+        if(answer== "Delhi" ||answer== "delhi"){
+            $("#result").text("your answer is correct");
+        }else{
+            $("#result").html('<span style="color:red">your answer is incorrect, "correct answer is Delhi"</span>');
+            //  $("#result").text("correct answer is Delhi");
+
+        }
+    });
+</script>
+</body>
+</html>

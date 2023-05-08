@@ -1,0 +1,26 @@
+body {
+    overflow-y: hidden;
+  
+  }
+  
+  #top-section {
+    margin-left: 8px;
+  }
+  
+  #items-container {
+    overflow-y: scroll;
+    height: 800px;
+  }
+  
+  #items-container > .list {
+    background: darkslategrey;
+    padding: 8px 8px;
+   
+  }
+  
+  #items-container .list li {
+    background: rgb(221, 173, 173);
+    color: white;
+    margin-bottom: 8px;
+    height: 300px;
+  }

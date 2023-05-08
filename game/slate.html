@@ -1,0 +1,302 @@
+<!DOCTYPE html++++
+<html>
+	<head>
+		<style>
+		body {
+			  background-image: url('slate.PNG');
+			  background-repeat: no-repeat;
+			  background-attachment: fixed;  
+			  background-position: center;
+			  background-size: 40% 88%;
+			}
+			
+			.dot {
+			  height: 25px;
+			  width: 25px;
+			  background-color: #bfbfbf;
+			  border-radius: 50%;
+			  display: inline-block;
+			  position: absolute;
+			}
+			.p1dot {
+				
+				background-image: url('player1.jpg') ;
+				cursor:pointer;
+				border:none;
+
+				background-size: 100%100%;
+
+			}
+			.p2dot {
+				background-image: url('player2.jpg');
+				cursor:pointer;
+				border:none;
+				position:center;
+				background-size: 100% 100%;
+
+			}	
+			.eedot {
+				background-color: #BFBFBF;
+			}
+			.player1 {
+				height: 50px;
+				width: 50px;
+				background-color: #BFBFBF;
+				top:5%;
+				left:5%
+			}
+			.player2 {
+				height: 50px;
+				width: 50px;
+				background-color: #000000;
+				top:5%;
+				right:5%
+			}
+			.clickedStone{
+				background-color: #1AFCE1;
+			}
+			.dot1 {			  
+			  top: 5%;
+			  left: 29.5%;
+			}
+			.dot2 {
+			  top: 5%;
+			  left: 49%;
+			}
+			
+			.dot3 {
+			  top: 5%;
+			  left: 68.5%;
+			}
+			.dot4 {
+			  top: 48%;
+			  left: 29.5%;
+			}
+			.dot6 {
+			  top: 48%;
+			  left: 68.5%;
+			}
+			.dot7 {
+			  top: 90.8%;
+			  left: 29.5%;
+			}
+			.dot8 {
+			  top: 90.8%;
+			  left: 49%;
+			  
+			}
+			.dot5 {
+			  top: 48%;
+			  left: 49%;
+			}
+			.dot9 {
+			  top: 90.8%;
+			  left: 68.5%;
+			}
+		</style>
+	</head>
+	<body>
+		<center><button id="p00" class="dot dot1 " onclick="onSlotClick(0,0)"></button></center>
+		<center><button id="p01" class="dot dot2" onclick="onSlotClick(0,1)"></button></center>
+		<center><button id="p02" class="dot dot3" onclick="onSlotClick(0,2)"></button></center>
+		<center><button id="p10" class="dot dot4" onclick="onSlotClick(1,0)"></button></center>
+		<center><button id="p12" class="dot dot6" onclick="onSlotClick(1,2)"></button></center>
+		<center><button id="p20" class="dot dot7" onclick="onSlotClick(2,0)"></button></center>
+		<center><button id="p21" class="dot dot8" onclick="onSlotClick(2,1)"></button></center>
+		<center><button id="p11" class="dot dot5" onclick="onSlotClick(1,1)"></button></center>
+		<center><button id="p22" class="dot dot9" onclick="onSlotClick(2,2)"></button></center>
+		<center><button id="player1" class="dot player1 p2dot" ></button></center>
+		<center><button id="player2" class="dot player2" ></button></center>
+		<script>
+			var mat = [[0,0,0],[0,0,0],[0,0,0]];
+			var p1ActiveStones=1,p2ActiveStones=1;
+			var previousClickedStone;
+			var turn=1,temp=0;
+			var row1,col1;
+			var validFormula;
+			var playerStatus1;
+			var playerStatus2;
+			//var changeTurn = function(id){
+			function changeTurn() {
+				
+				if(turn==1){
+					turn = 2;
+					
+				}
+				else if(turn==2){
+					turn = 1;					
+				}
+				console.log(turn);
+			}
+			function updateSlot(id,newval){
+				var slot = document.getElementById(id);
+				playerStatus1=document.getElementById("player2")
+				playerStatus2=document.getElementById("player1")
+				if(newval==1){
+					slot.classList.remove("p1dot");
+					playerStatus2.classList.remove("p2dot");
+					slot.classList.add("p2dot");
+					playerStatus1.classList.add("p1dot");
+				}
+				else if(newval==2){
+					
+					slot.classList.remove("p2dot");
+					playerStatus1.classList.remove("p1dot");
+					slot.classList.add("p1dot");
+					playerStatus2.classList.add("p2dot");
+				}
+				else {
+					slot.classList.remove("p1dot");
+					slot.classList.remove("p2dot");
+				}
+				console.log("update turn"+turn);
+				
+			}
+			function onSlotClick(r,c){
+				x= p1ActiveStones;
+				y= p2ActiveStones;
+				if(mat[r][c]==0 && x<=3 && turn ==1){
+					mat[r][c] = turn;
+					var id= "p"+r+""+c;
+					updateSlot(id,mat[r][c]);
+					changeTurn();
+					console.log("matrix"+mat+"   p1count "+x);
+					p1ActiveStones++;
+				}
+				else if(mat[r][c] ==0 && y<=3 && turn == 2){
+					mat[r][c] = turn;		
+					var id= "p"+r+""+c;			
+					updateSlot(id,mat[r][c]);
+					changeTurn();
+					console.log("matrix"+mat+"   p2count "+y);
+					p2ActiveStones++;										
+				}
+				else if(y>3 || x>3){
+					moveToCheck(r,c);
+				}
+				if(x>2||y>2){
+					checkToWin(r,c);
+				}
+			}
+			function moveToCheck(row,col){
+				var id="p"+row+""+col;
+				var slot = document.getElementById(id);
+				
+				
+				if(mat[row][col] !=0 && temp==0){
+					row1=row;
+					col1=col;
+					slot.classList.add("clickedStone");
+					temp=mat[row][col];
+					mat[row1][col1]=0;
+					previousClickedStone = slot;
+					
+				}
+				else if(mat[row][col]==0 && temp!=0){
+					checkValid = isValidMove(row1,col1,row,col);
+					console.log("moveTo()isValid "+validFormula);
+					if((checkValid>1 && checkValid<1.5)&&((row==1&&col==1)||(row1==1&&col1==1))){
+						temp=moveTo(temp,row,col);
+					}
+					else if(checkValid==1)
+					{
+						temp=moveTo(temp,row,col);
+					}
+				}
+				console.log("matrix MoveTo()"+mat);
+				checkToWin(row,col);
+			}
+			function checkToWin(row,col){
+				var countForWin=0,tempForCount=0;
+				//for(i=0;i<3;i++){
+					if((mat[row][0]==mat[row][1])&&(mat[row][1]==mat[row][2])&&(mat[row][1]!=0))
+					{
+						console.log("check who win the game"+mat[row][0]);
+						if(mat[row][0]==1){
+							alert("Player one win the Game!");
+							console.log("player one win the game"+mat[row][0]);
+						}
+						else{
+							alert("Player Two win the Game!");
+							console.log("player 1 two win the game");
+						}
+						
+
+					}
+					else if((mat[0][col]==mat[1][col]&&mat[1][col]==mat[2][col])&&(mat[1][col]!=0))
+					{
+						console.log("check who win the game"+mat[row][0]);
+						if(mat[col][0]==1){
+							alert("Player one win the Game!");
+							console.log("player one win the game");
+						}
+						else{
+							alert("Player Two win the Game!");
+							console.log("player two win the game");
+						}
+					}	
+					else if((mat[0][0]==mat[1][1])&&(mat[1][1]==mat[2][2])&&(mat[2][2]!=0)||(mat[0][2]==mat[1][1])&&(mat[1][1]==mat[2][0])&&(mat[2][0]!=0)){
+						if(mat[2][2]==1)
+						{
+							alert("Player one win the Game!");
+							console.log("Player one win the game");
+						}
+						else if(mat[2][2]==2){
+							alert("Player Two win the Game!");
+							console.log("player two win the game");
+						}
+						else if(mat[2][0]==1)
+						{
+							alert("Player one win the Game!");
+							console.log("Player one win the game");
+						}
+						else if(mat[2][0]==2){
+							alert("Player Two win the Game!");
+							console.log("player two win the game");
+						}
+					}			
+			}
+			function isValidMove(row1,col1,row2,col2){
+				//validFormula = Math.pow(Math.pow((1-2),2)+Math.pow(2-1),2);
+				x=(Math.pow(row2-row1,2));
+				y=(Math.pow(col2-col1,2));
+				console.log("----------------------------------");
+				console.log("row1 "+row1+" col1 "+col1);
+				console.log("row2 "+row2+" col2 "+col2);
+				console.log("row2-row1 "+x+" col2-col1 "+y);
+				validFormula = Math.sqrt(x+y);
+				console.log("isValid() "+validFormula);
+				return validFormula;
+				
+			}
+			function moveTo(temp,row,col){
+						var id= "p"+row+""+col;
+						var slot=document.getElementById(id);
+						playerStatus1=document.getElementById("player2")
+						playerStatus2=document.getElementById("player1")
+						if(temp==2){
+							slot.classList.add("p1dot");
+							previousClickedStone.classList.remove("clickedStone");
+							previousClickedStone.classList.remove("p2dot");
+							previousClickedStone.classList.remove("p1dot");
+							playerStatus2.classList.add("p2dot");
+							playerStatus1.classList.remove("p1dot");
+							mat[row][col]=temp;
+							temp = 0;
+						}
+						else if(temp == 1){
+							slot.classList.add("p2dot");
+							previousClickedStone.classList.remove("clickedStone");
+							previousClickedStone.classList.remove("p2dot");
+							previousClickedStone.classList.remove("p1dot");
+							playerStatus1.classList.add("p1dot");
+							playerStatus2.classList.remove("p2dot");
+							mat[row][col]=temp;
+							temp =0;
+						}
+						return temp;
+			}
+				
+		</script>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+    background-color: blanchedalmond;
+}
+#clock{
+    color=black;
+    font-size: xx-large;
+}
+table{
+    background-color: azure;
+    margin: 400px;
+    border: 5px solid silver;
+}

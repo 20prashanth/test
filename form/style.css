@@ -1,0 +1,27 @@
+div{
+    background-color: pink;
+    width:600px;
+    height: 400px;
+    margin-top: 15%;
+    margin-left: 40%;
+    margin-bottom: 25%;
+}
+h1{
+    color: black;
+    text-align:center;
+}
+h2{
+    color: black;
+    text-align:center;
+}
+table{
+    margin-bottom: 200px;
+  color: black;
+}
+
+select {
+    border: 1px solid black;
+}
+table{
+    margin-left: 150px;
+}

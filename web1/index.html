@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div>
+        
+            <h1>SOME UNIVERSITY</h1>
+            <h2>Student Registration Form</h2>
+        
+            <table>
+                <tr>
+                    <td>Name</td><td>:</td>
+                    <td><input type="text" placeholder="Enter the Name"></td>
+                </tr>
+
+                <tr>
+                    <td>DOB</td><td>:</td>
+                    <td><input type="date" max="2022-11-02"></td>
+                </tr>
+                <tr>
+                    <td>Sex</td><td>:</td>
+                    <td><span><input type="radio" name="gender" value="male">Male</span><span><input type="radio"
+                                name="gender" value="female">Female</span></td>
+                </tr>
+                <tr>
+                    <td>Email</td><td>:</td>
+                    <td><input type="email" placeholder="Enter the Email"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Address</td><td>:</td>
+                    <td><input type="text" placeholder="Enter the Address"></td>
+                </tr>
+                <tr>
+                    <td>School</td><td>:</td>
+                    <td><select name="school" id="schoolList">School
+                            <option  selected disabled> Select</option>
+                            <option >dbhs</option>
+                            <option >cmr</option>
+                            <option >cvr</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Department
+                    </td><td>:</td>
+                    <td><select name="Department" id="departmentList">Department
+                            <option  selected disabled>Select</option>
+                            <option >cse</option>
+                            <option >EEE</option>
+                            <option>civil</option>
+                            <option >MECH</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Course</td><td>:</td>
+                    <td><select name="Course" id="courseList">
+                            <option value="" selected disabled>Select</option>
+                            <option >MPC</option>
+                            <option >BiPC</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td><td>:</td>
+                    <td><input type="number" maxlength="10" placeholder="Enter the Mobile Number"></td>
+                </tr>
+                <tr>
+                    <td><input type="Reset"   ></td>
+                    &nbsp;  
+                    &nbsp;
+                    <td><input type="submit" ></td>
+                </tr>
+
+            </table>
+       
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+var employee={
+    name:"prashnth",
+    id:702,
+    age:22,
+    gender:"male",
+    designation:"ase"
+   
+};
+var p = Object.entries(employee);
+for(var [key,value] of p ){
+    
+console.log(key,":" +value);
+}

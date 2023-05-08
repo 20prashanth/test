@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <tittle> learning html</tittle>
+    </head>
+    <body>
+        <h1>Write Your First Heading</h1>
+        <b> Bold Tag </b><br>
+    
+        <i> Italic Tag </i><br>
+    
+        <u> Underline Tag</u><br>
+        <p>Write Your First Paragraph.</p> <br>
+        <p><strong>This is an important content</strong>, and this is normal content</p> <br>
+        <p> <strike>Write Your First Paragraph with strikethrough</strike>.</p> <br>
+        <p>Hello <sub>Write Your First Paragraph in subscript.</sub></p><br>
+        <p>Hello <del>Delete your first paragraph.</del><ins>Write another paragraph.</ins></p><br>
+        <p>Hello <big>Write the paragraph in larger font.</big></p> <br>
+        <p>Hello <small>Write the paragraph in smaller font.</small></p> <br>
+        <p>This tag will <mark>highlight</mark> the text.</p> <br>
+        <p>Steve Jobs said: <q>If You Are Working On Something That You Really Care About, You Don?t Have To Be Pushed. The
+                Vision Pulls You.</q>?</p> <br>
+        <p class="jp">First Java program</p>
+        <p><code>class Simple{ public static void main(String args[]){   
+           System.out.println("Hello Java"); }} </code>
+        </p> <br>
+        <address> You can ask your queries by contact us on <a href="">example123@newdomain.com</a>
+            <br> You can also visit at: <br>58 S. Garfield Street. Villa Rica, GA 30187.
+        </address>
+        <div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+    
+        <a href="01-first-steps.html">Click for another of basic html Page</a> <br>
+        <img src="C:\Users\User\Desktop\tajmahal.jpg" />
+    
+        <table border="1px solid black">
+            <caption style="caption-side:bottom">marks list highlighted by
+                <cite> high marks</cite>
+            </caption>
+            <tr>
+                <th>First_Name</th>
+                <th>Last_Name</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Sonoo</td>
+                <td>Jaiswal</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>James</td>
+                <td>William</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td><mark>Swati</mark></td>
+                <td><mark>Sironi</mark></td>
+                <td><mark>82</mark></td>
+            </tr>
+            <tr>
+                <td>Chetna</td>
+                <td>Singh</td>
+                <td>72</td>
+            </tr>
+        </table>
+        <h2>ordered lists</h2>
+        <ol>
+            <li>Aries</li>
+            <li>Bingo</li>
+            <li>Leo</li>
+            <li>Oracle</li>
+        </ol><hr>
+        <h2>unordered list</h2>
+        <ul>
+            <li>Aries</li>
+            <li>Bingo</li>
+            <li>Leo</li>
+            <li>Oracle</li>
+        </ul><hr>
+        <dl>
+            <dt>ankam rao</dt>
+            <dd>he is the student of kl univercity</dd>
+            <dt>j prashanth</dt>
+            <dd>he is the student of siet</dd>
+    
+        </dl><hr>
+        <h2>image of tajamahal</h2>
+        <a href="https://www.youtube.com/watch?v=pQN-pnXPaVg">
+        <img src="tajmahal.jpg" width="100%" height="250%"></a><br>
+       
+
+        <figcaption>the figure of tajmahal</figcaption>
+        <h2> to understand iframe tag</h2>
+        <iframe src="01-first-steps.html" title="html">
+        </iframe>
+        <h2> to go w3schools page</h2>
+        <button onclick="document.location='https://www.w3schools.com/TAgs/tag_button.asp'">click to go
+            w3schools</button><br>
+        <dialog open>This is an open dialog window</dialog>
+        <bdo dir="rtl">this is prashanth</bdo>
+        <h1>The datalist element</h1>
+    
+        <form action="/action_page.php" method="get">
+            <label for="browser">Choose your browser from the list:</label>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            <input type="submit">
+        </form>
+    
+        <p style="text-shadow: 4px 2px 3px blue;"><strong>Note:</strong> The datalist tag is not supported in Safari 12.0
+            (or earlier).</p>
+        <details>
+            <summary>prashanth</summary>
+            <p>he completed his btech in siet. Now he is working in etg digital service</p>
+        </details>
+        <h1>The fieldset element</h1>
+    
+        <form>
+            <fieldset>
+                <legend>Personalia:</legend>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday"><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+        <h1>The meter element</h1>
+    
+        <p>The meter element is used to display a gauge:</p>
+    
+        <label for="disk_c">Disk usage C:</label>
+        <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter><br>
+    
+        <label for="disk_d">Disk usage D:</label>
+        <meter id="disk_d" value="0.6">60%</meter>
+    
+        <p><strong>Note:</strong> The meter tag is not supported in Edge 12 (or earlier).</p>
+        <h1>video</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tSZrPhSWEGU" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+            <div>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            
+            
+            <article class="article1">hi</article>
+            <article class="article2">welcome to etg</article><br><br>
+            <article class="article3">this prashanth, </article>
+            <article class="article4"></airticle> have completed btech in siet</article><br><br><br><br>
+            <button type="button"
+            onclick="document.getElementById('demo').innerHTML = Date()">
+            Click me to display Date and Time.</button>
+            <p id="demo">hi</p>
+            <h4 id="jpr">learn javascript</h4>
+            <button type="button" onclick="fun()" >change text</button>
+            <script>
+            function fun(){
+                document.getElementById("jpr").innerHTML = "completed learning java script ";
+            }
+        </script>    
+            
+    </body>
+    
+    </html>  
+    

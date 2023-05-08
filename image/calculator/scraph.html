@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <tittle>calculator</tittle><br>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        input {
+           
+            background-color: whitesmoke;
+            color: black;
+            border: 1px solid white;
+            padding: 30px;
+            height: 20px;
+            font-size: x-large;
+            width: 20px;
+            border: 2px solid yellowgreen;
+        }
+
+        .container {
+
+            background-color: rgb(211, 219, 226);
+            width: 350px;
+            height: 450px;
+            padding: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id="result" style=" width: 270px; border:1px solid black"></td>
+
+            </tr>
+
+            <td colspan="3"><input type="button" value="C" onclick="clearscreen()"
+                    style=" width: 135px; border: 1px solid green;" /></td>
+            <td><input type="button" class="button" onclick="backspace()" value="del"
+                    style=" width: 135px; border: 1px solid green;" /></td>
+
+        </table>
+        <div class="keys">
+
+            <input type="button" class="button" onclick="display('7')" value=7></input>
+            <input type="button" class="button" onclick="display('8')" value="8"></input>
+            <input type="button" class="button" onclick="display('9')" value="9"></input>
+            <input type="button" class="operator" onclick="display('/')" value="/"
+                style="background-color:rgb(39, 221, 39)"></input><br>
+            <input type="button" class="button" onclick="display('4')" value="4"></input>
+            <input type="button" class="button" onclick="display('5')" value="5"></input>
+            <input type="button" class="button" onclick="display('6')" value="6"></input>
+            <input type="button" class="operator" onclick="display('*')" value="*"
+                style="background-color:rgb(127, 143, 153)"></input><br>
+            <input type="button" class="button" onclick="display('1')" value="1"></input>
+            <input type="button" class="button" onclick="display('2')" value="2"></input>
+            <input type="button" class="button" onclick="display('3')" value="3"></input>
+            <input type="button" class="operator" onclick="display('-')" value="-"
+                style="background-color:pink"></input><br>
+            <input type="button" class="button" onclick="display('0')" value="0"></input>
+            <input type="button" class="button" onclick="display('.')" value="."></input>
+            <input type="button" class="button" onclick="displayeq('=')" value="="
+                style="background-color:rgb(33, 163, 51)"></input>
+            <input type="button" class="operator" onclick="display('+')" value="+"
+                style="background-color:rgb(100, 149, 237)"></input>
+
+        </div>
+    </div>
+    <script src="scraph.js"></script>
+</body>
+
+</html>

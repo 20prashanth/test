@@ -1,0 +1,60 @@
+Opportunity required fields :
+ 
+-> Opportunity Name
+-> Close Date
+-> Stage 
+
+Opportunity related list:
+
+-> Products
+-> Notes & Attachments
+-> Contact Roles
+-> Partners
+-> Stage History
+-> Approval Histroy
+-> Quotes
+
+
+
+Orders required fields:
+
+-> Account Name
+-> Order Start Date
+-> Contract Number
+-> Status
+
+Orders related list:
+
+-> Order Products
+-> Order History
+-> Notes & Attachments
+
+
+When we are adding the  products to opportunity the required fields are:
+
+-> Product
+-> Quantity
+-> Sales Price
+ 
+When we are adding the  products to Orders  the required fields are:
+
+-> Quantity
+-> List Price
+-> Unit Price
+
+
+When products are added to an opportunity :
+
+-> Amount: The amount field is automatically populated based on the price of the products added to the opportunity.
+
+-> Expected Revenue : The expected revenue is auotatically populated based on the amount expected revenue is calculated.
+
+-> In related list the Stage History field gets the details of the Product like:
+
+1) stage
+2) Amount
+3) Probability 
+4) Expected Revenue
+5) Close Dtae
+6) Last Modified By
+7) Last Modified

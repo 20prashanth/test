@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="for" >
+        <h1 class="text-center">login form</h1>
+        <form action="#">
+            <table  >
+                <tr>
+                    <td>
+                        <label for="name"> Name: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="nameS"  placeholder="Enter your Name" required maxlength="45">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="phonenumber"> Phone Number: </label>
+                    </td>
+                    <td>
+                        <input type="tel" name="phonenumber" id="phonenumber"  placeholder="Enter your Phone Number" required maxlength="45">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email"> Email: </label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email" placeholder="Enter your Email" required maxlength="45">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="summary"> Summary: </label>
+                    </td>
+                    <td>
+                        <textarea id="summary" name="summary" rows="4" cols="20" placeholder="Enter your summary"
+                            required maxlength="45"></textarea>
+                    </td>
+                </tr>
+                <tr>
+
+
+                    <td>
+                        <label for="checkbox"> Choose Known spoken languages: </label>
+                    </td>
+                    <td>
+
+
+                        <div>
+                            <input type="checkbox" id="telugu" name="telugu" value="Telugu">
+                            <label for="telugu">Telugu</label>
+                        
+                            <!-- <input type="checkbox" id="hindi" name="hindi">
+                            <label for="hindi">Hindi</label> -->
+                        
+                            <input type="checkbox" id="english" name="english" value="English">
+                            <label for="english">English</label>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="education"> Education: </label>
+                    </td>
+                    <td>
+                          <input type="radio" id="ug" name="education" value="ug">
+                          <label for="ug" id="ug">UG</label><br>
+                          <input type="radio" id="pg" name="education" value="pg">
+                          <label for="pg" id="pg">PG</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="movie"> Movies Watched: </label>
+                    </td>
+                    <td>
+                        <select id="select">
+                            <option value="">Select</option>
+                            <option value="KGF">KGF</option>
+                            <option value="God Fathe">God Father</option>
+                            <option value="Kantara">Kantara</option>
+                            <option value="Bahubali">Bahubali</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>   
+                    <td>
+                        <label for="dob"> DOB: </label></td>
+                    <td> <input type="date"  ></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="container">
+                            <!-- Trigger the modal with a button -->
+                            <button type="button" class=" btn-btn-primary submitbtn" >submit</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Modal Header</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- <p>Some text in the modal.</p> -->
+                                            <form action="#">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <label for="name" id="n"> Name: </label>
+                                                        </td>
+                                                        <td class="dname">
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <label for="phonenumber"> Phone Number: </label>
+                                                        </td>
+                                                        <td class="number">
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label for="email"> Email: </label>
+                                                        </td>
+                                                        <td class="email">
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label for="summary"> Summary: </label>
+                                                        </td>
+                                                        <td class="summary"></td>
+
+                                                    </tr>
+                                                    <tr>
+
+
+                                                        <td>
+                                                            <label for="checkbox"> Choose Known spoken languages:
+                                                            </label>
+                                                        </td>
+                                                        <td class="checkbox">
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label for="education"> Education: </label>
+                                                        </td>
+                                                        <td class="education">
+                                                             
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label for="movie"> Movies Watched: </label>
+                                                        </td>
+                                                        <td class="movie">
+                                                            <select id="">
+                                                                <option value="">KGF</option>
+                                                                <option value="">God Father</option>
+                                                                <option value="">Kantara</option>
+                                                                <option value="">Bahubali</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            DOB :</td>
+                                                        <td class="dob"> <input type="date"></td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

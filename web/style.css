@@ -1,0 +1,43 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+#logo{
+    background-image: url("/img/0/top-banner.png");
+    height: 800px;
+}
+#logo, p{
+    text-align: left;
+    color: blue;
+    font-size: 80px;
+    font-style: bold;
+   
+}
+#btn{
+    border-radius: 9rem;
+    font-size: 30px;
+    padding: 2rem,4rem,2rem,4rem;
+    background-color: yellow;
+    margin-left: 20px;
+    border-style: none;
+    text-align: center;
+}
+.btn-register {
+    background-color: rgb(128, 86, 148);
+    color: rgb(219, 190, 58)
+}
+#logo1{
+    margin-left: 200px;
+}
+.stories {
+
+    position: relative;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+.contact img {
+    width:50vh;
+}

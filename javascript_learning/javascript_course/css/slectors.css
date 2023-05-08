@@ -1,0 +1,44 @@
+a:hover{
+    color:white;
+    font-size: 50px;
+    background-color: black;
+
+}
+a:active{
+    color:pink;
+}
+a:visited{
+ color:red;
+ 
+}
+a:link{
+    color:blue;
+}
+
+p{
+    color:red;
+
+}
+ li:last-child{
+    color:green;
+ }
+ li:first-child{
+    color:orange;
+
+ }
+ h4,tittle{
+    color:yellow;
+    background-color: black;
+ }
+ ul > li {
+    color:blueviolet;
+ }
+ img[src*="../tajmahal.jpg"]{
+    border:10px solid black;
+    float: right;
+    margin: 1000px 10px 150px 5px;
+    padding:100px;
+ }
+ p[class|= p2]{
+    color:pink;
+ }

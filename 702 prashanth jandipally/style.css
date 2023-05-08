@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.loader{
+    position: fixed;
+    bottom: 0;
+    left: 48%;
+}

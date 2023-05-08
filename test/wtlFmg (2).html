@@ -1,0 +1,120 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name="oid" value="00DDK000000HPcQ">
+<input type=hidden name="retURL" value="https://www.google.com/">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail" value="megha.s@etg.digital">     -->
+<!--  ----------------------------------------------------------------------  -->
+
+<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+<label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
+
+<label for="country">Country</label><select  id="country_code" name="country" onchange="window.CountryChange()">
+<option value="">--None--</option>
+<option value="Canada">Canada</option>
+<option value="United States">United States</option>
+</select><br>
+<div id="stateField" >
+<label for="state" id="stateLabel">State/Province</label><select  id="state_code" name="state">
+ <option value="">None</option>
+
+</select></div>
+<label for="zip">Zip</label><input  id="zip" maxlength="6" name="zip" size="6" type="number" /><br><br>
+<input type="submit" name="submit">
+
+</form>
+<script>
+    window.CountryChange = function () {
+        var countryState = [
+          [
+           
+            'United States', [
+              ['', 'Select'],
+              ['AL', 'Alabama'],
+              ['AK', 'Alaska'],
+              ['AZ', 'Arizona'],
+              ['AR', 'Arkansas'],
+              ['CA', 'California'],
+              ['CO', 'Colorado'],
+              ['CT', 'Connectiut'],
+            ],
+          ],
+          [
+            'Canada', [
+              ['', 'Select'],
+              ['AL','Alberta'],
+              ['BC','British Columbia'],
+              ['MA', 'Manitoba'],
+              ['NB', 'New Brunswick'],
+            ],
+            '--None--',[
+                
+                ['nn', '--None--']
+            ]                                                  
+          ]
+        ];
+    
+        var countryElement = document.getElementById('country_code');
+        var stateElement = document.getElementById('state_code');
+        var stateLabelElement = document.getElementById('stateLabel');
+        var stateFieldElement = document.getElementById('stateField');
+        var zip = document.getElementById('zip');
+        if (countryElement && stateElement) {
+          var listOfState = [
+            ['xx', 'None']
+          ];
+    
+          var currentCountry = countryElement.options[countryElement.selectedIndex].value;
+          for (var i = 0; i < countryState.length; i++) {
+            if (currentCountry == countryState[i][0]) {
+              listOfState = countryState[i][1];
+            }
+          }
+    
+          var selectedState;
+          for (var i = 0; i < stateElement.length; i++) {
+            if (stateElement.options[i].selected === true) {
+              selectedState = stateElement.options[i].value;
+            }
+          }
+          stateElement.options.length = 0;
+          for (var i = 0; i < listOfState.length; i++) {
+            stateElement.options[i] = new Option(listOfState[i][1], listOfState[i][0]);
+            if (listOfState[i][0] == selectedState) {
+              stateElement.options[i].selected = true;
+            }
+          }
+        }
+      console,log(currentCountry);
+if(currentCountry = 'canada'){
+zip.addEventListener("input", function() {
+  if (zip.value.length > myField.maxLength) {
+    myField.value = myField.value.slice(0, myField.maxLength);
+  }
+});
+ } }
+</script>
+ 

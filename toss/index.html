@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+  <title>Heads or Tails</title>
+  <script>
+    var inc = 0;
+    var tmr;
+    var tmrStatus = false;
+    var tossTimes = 0;
+    function randomValue(min, max) {
+      var rd = Math.random();
+      var rd2 = rd * (max - min + 1);
+      var finalValue = Math.floor(rd2);
+      return finalValue;
+    }
+
+    function myTimer() {
+      tmr = setInterval(animate, 1);
+    }
+    function startTimer() {
+      if (!tmrStatus) {
+        myTimer();
+        tmrStatus = true;
+      }
+    }
+    function stopTimer() {
+      clearInterval(tmr);
+      tmrStatus = false;
+    }
+    function animate() {
+      var head = 0;
+      var tail = 0;
+
+      var result = document.getElementById('res');
+      var pic = document.getElementById('pic');
+      if (inc == 0) {
+        pic.src = "image/head2.png";
+        head = head++;
+        document.getElementById('head').innerHTML = head;
+      } else {
+        pic.src = "image/tail.png";
+        tail++;
+        document.getElementById('tail').innerHTML = tail;
+        inc = 0;
+      }
+      inc++;
+      tossTimes++;
+
+      if (tossTimes == 10) {
+        stopTimer();
+        tossTimes = 0;
+      }
+      var head = 0;
+      var tail = 0;
+
+      var coins = ["image/head2.png", "image/tail.png"];
+      var value = Math.floor(Math.random() * coins.length);
+
+      if (value == 0) {
+        pic.src = "image/head2.png";
+        result.innerHTML = "Head"
+      
+
+      } else {
+        pic.src = "image/tail.png";
+        result.innerHTML = "Tail"
+        
+
+      }
+
+      // var tossValue = Math.floor(randomValue(0, 1));
+      // if (tossValue == 0) {
+      //   pic.src = "image/head2.png";
+      //   result.innerHTML = "Head"
+      //   head++;
+
+
+      //   document.getElementById('head').innerHTML = head;
+      // } else {
+      //   pic.src = "image/tail.png";
+      //   result.innerHTML = "Tail"
+      //   tail++;
+      //   document.getElementById('tail').innerHTML = tail;
+      // }
+    }
+    function toss() {
+      // var tossValue = randomValue(0, 1);
+      startTimer();
+    
+
+    function count() {
+      var head = 0;
+      var tail = 0;
+
+      var coins = ["image/head2.png", "image/tail.png"];
+      var value = Math.floor(Math.random() * coins.length);
+
+      if (tossTimes*inc == 0) {
+        head = head+1  ;
+
+
+        document.getElementById('head').innerHTML = head;
+
+      } else if (tossTimes*inc == 1)  {
+        tail = tail+1;
+        document.getElementById('tail').innerHTML = tail;
+
+      }
+
+    }
+  }
+
+  </script>
+
+  <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+  <div class="game">
+    <h1 id="res">Result</h1>
+    <hr />
+    <img src="image/head2.png" id="pic">
+
+    <hr />
+    <button onclick="toss()">toss the coin</button><br><br><br>
+    <p>Head-Count : <span id="head"></span></p>
+    <p>Tail-Count : <span id="tail"></span></p>
+
+    <!-- <label for id="head">Head</label>
+    <input type="number" id="head" value=""><br><br>
+    <label for id="tail">Tail</label>
+    <input type="number" id="tail" value=""> -->
+
+  </div>
+
+</body>
+
+</html>

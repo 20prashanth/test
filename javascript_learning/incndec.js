@@ -1,0 +1,10 @@
+let x=10;
+let y=11;
+console.log(x--);
+console.log(y++);
+console.log(x);
+console.log(y);
+console.log(--x);
+console.log(++y);
+console.log(x+=1);
+console.log(x-=1);

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>  
+<style>
+div{
+  border: 1px solid black;
+  width:550px;
+  margin:260px;
+  padding:50px;
+  }
+  #Email{
+  width:250px;
+  height:40px
+  }
+   #password{
+  width:250px;
+  height:40px
+  }
+  </style>
+  <div style="text-align:center">
+<h2 style="text-align:center;color:blue">Google</h2>
+<h2 style="text-align:center">Sign in</h2>
+<p style="text-align:center"><ins>to continue to gmail</ins></p>
+<form name="myform">
+  <label for="Email">Email</label><br>
+  <input type="text" id="Email" name="Email"><br>
+  <label for="password">password:</label><br>
+  <input type="password" id="password" name="password"><br><br>
+  <button type="submit" value="login" onclick="setcookie()">login</button>
+  <button type="button" id="1" value="Edit" onclick="editcookie()">Edit</button>
+  <button type="delete" id="2" value="Delete" onclick="deletecookie()">Delete</button><br>
+</form>
+
+  <a href="forgot password">forgot password</a>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

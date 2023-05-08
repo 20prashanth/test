@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            var n=document.mf.nm.value;
+            var p=document.mf.pwd.value;
+            if (n =="prashanth"&&p =="hello"){
+                alert("sucess");
+            } else if (p ==""&&n==""){
+                alert("name and password are required");
+            }else{
+                alert("incorrect name and password");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="mf" onsubmit=fun()>
+        <input  type="text"  name="nm" placeholder="name">
+        <input type="password" name="pwd" placeholder="password">
+        <input type="submit" value="login"> 
+    </form>
+</body>
+</html>

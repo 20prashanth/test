@@ -1,0 +1,87 @@
+.a1{
+    animation-name:red-to-green;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+@keyframes red-to-green{
+    0%{
+        background-color:red;
+        transform:translate(0px,0px);
+    }
+    50%{
+        background-color:yellow;
+        transform:translate(20px,20px);
+    }
+    100%{
+        background-color:green;
+        transform:translate(30px,30px);
+    }
+}
+
+.a2{
+    animation-name:lightblue-to-green;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+}
+  
+@keyframes lightblue-to-green{
+    0%{
+        background-color:lightblue;
+        transform:translate(0px,0px);
+    }
+    50%{
+        background-color:yellow;
+        transform:translate(20px,20px);
+    }
+    100%{
+        background-color:green;
+        transform:translate(30px,30px);
+    }
+}
+
+.a3{
+    animation-name:burlywood-to-green;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes burlywood-to-green{
+    0%{
+        background-color:burlywood;
+        transform:translate(0px,0px);
+    }
+    50%{
+        background-color:pink;
+        transform:translate(20px,20px);
+    }
+    100%{
+        background-color:green;
+        transform:translate(30px,30px);
+    }
+}
+
+.a4{
+    animation-name:pink-to-green;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction:alternate-reverse;
+}
+
+@keyframes pink-to-green{
+    0%{
+        background-color:burlywood;
+        transform:translate(0px,0px);
+    }
+    50%{
+        background-color:lightgrey;
+        transform:translate(20px,20px);
+    }
+    100%{
+        background-color:green;
+        transform:translate(30px,30px);
+    }
+}

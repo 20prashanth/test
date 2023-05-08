@@ -1,0 +1,75 @@
+#tittle{
+    color:rgb(180, 170, 120)
+}
+  body{
+    background: url("../smile.jpg");
+    background-repeat: no-repeat;
+    background-color: blanchedalmond;
+    background-attachment: fixed;
+    background-size: 100px 100px;
+  }
+
+
+.para{
+    color: blueviolet;
+    background-color: aqua;
+}
+
+.para1{
+    color:coral;
+    background-color: ghostwhites;
+}
+.linear-gradiant{
+    background: linear-gradient(red, blue, yellow);
+    height:200px;
+    width:200px;
+    border:5px double green;
+    margin-left: 500px;
+    padding: 50px;
+
+}
+.hi{
+    background: radial-gradient( red, green, blue);
+    height:300px;
+    width:300px;
+    border:10px solid gray;
+    padding:100px;
+  
+
+.a{
+    font-size: large;
+}
+
+.b{
+    font-style: oblique;
+    font-size:small ;
+    font-family:  "sarabun",san-serif;
+}
+
+.c{
+    text-align: right;
+    font-family: cambria;
+    font-style: inherit;
+    font-size: x-large;
+}
+
+.d{ 
+    text-align: center ;
+    font-weight: 100;
+    font-size: xx-large;
+    font-family:  "arial",san-serif;
+    text-shadow: 4px 5px 6px blue;
+}
+img[src="../smile.jpg"]{
+    float:right;
+    width:350px;
+    height:400px;
+}
+
+.f{
+    text-decoration: wavy;
+}
+table{
+    border="1px solid black"
+    display:inline;
+}

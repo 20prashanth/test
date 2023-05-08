@@ -1,0 +1,26 @@
+.t1:hover{
+    background-color: rgb(196, 124, 37);
+}
+
+.t2:hover{
+    background-color: rgb(0, 255, 64);
+    transition: 3s ease-in;
+}
+
+.t3{
+    background-color: rgb(0, 255, 64);
+    transition: 3s ease-in;
+    transform: translate(40px, 20px);
+}
+
+.t4{
+    background-color: rgb(0, 255, 64);
+    transition: 3s ease-in;
+    transform: scale(3,5);
+}
+
+.t5{
+    background-color: rgb(0, 255, 64);
+    transition: 3s ease-in;
+    transform: rotate(-40deg);
+}

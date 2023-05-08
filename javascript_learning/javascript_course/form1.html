@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <tittle>counsling form</tittle>
+    <style>
+        body {
+            text-align: center;
+            font-size: 20px;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        body label {
+            padding: 50px;
+        }
+
+        table:hover {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body id="pra">
+    <h2 style="text-align:center; background-color:aqua">Engineering Counsling Form</h2><br><br>
+    <div>
+        <table >
+            <tr>
+                <td> <label for="fname">First Name</label> </td>
+                <td> <input type="text" id="fname" name="fname"  /> </td>
+                <td> <label for="lname">Last Name</label> </td>
+                <td> <input type="text" id="lname" name="lname" /></td>
+            </tr>
+            <tr>
+                <td> <label for="DOB">DOB</label> </td>
+                <td> <input type="date" id="DOB" name="DOB" /> </td>
+                <td> <label for="gender">Gender</label> </td>
+                <td> <input type="text" id="gender" name="gender" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="father name">Father Name</label> </td>
+                <td> <input type="text" id="father name" name="father name" /> </td>
+                <td> <label for="mother name">Mother name</label> </td>
+                <td> <input type="text" id="mother name" name="mother name" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="adhar num"> Adhar No</label> </td>
+                <td> <input type="text" id="adhar num" name="adhar num" /> </td>
+                <td> <label for="inter h.no">Inter Hall Ticket no</label> </td>
+                <td> <input type="text" id="inter h.no" name="inter h.no" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="eamcet h.no"> Eamcet Hallticket Number</label> </td>
+                <td> <input type="text" id="eamcet h.no name=" eamcet h.no" /> </td>
+                <td><label for="eamcet">Eamcet Rank</label> </td>
+                <td> <input type="text" id="eamcet" name="eamcet" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="inter h.no"> Inter Hallticket Number</label> </td>
+                <td> <input type="text" id="inter h.no name=" inter h.no" /> </td>
+                <td><label for="inter">Inter Marks</label> </td>
+                <td> <input type="text" id="inter" name="inter" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="browser">Caste:</label> </td>
+                <td> <input list="browsers" name="browser" id="browser">
+                    <datalist id="browsers">
+                        <option value="SC">
+                        <option value="Bc">
+                        <option value="BCD">
+                        <option value="OCB">
+                        <option value="ECB">
+                    </datalist>
+                </td>
+                <td><label for="income">Income</label> </td>
+                <td> <input type="number" id="income" name="income" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="bro">colleges:</label> </td>
+                <td> <input list="brow" name="bro" id="bro">
+                    <datalist id="brow">
+                        <option value="SIEI">
+                        <option value="MLRG">
+                        <option value="MIRI">
+                        <option value="BVRIT">
+                        <option value="MIRG">
+                    </datalist>
+                </td>
+            </tr>
+        </table>
+        <p style="text-align:center" >
+       <input type ="button" value="submit" onclick="func()"></p>
+    </div>
+</body>
+<script>
+function func(){
+    document.getElementById("pra").innerHTML="Form Submitted succesfully";
+}
+</script>
+
+</html>

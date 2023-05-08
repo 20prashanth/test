@@ -1,0 +1,17 @@
+#top, #down{
+  padding: 10px;
+  background-color: aquamarine;
+  text-align: center;
+  color:black;
+  /* border: solid 1px #666;
+  border-radius: 3px; */
+}
+#down, #own{
+    padding: 50px;
+    display: none;
+}
+
+#own{
+    justify-content: center;
+    margin-left: 350px;
+}
